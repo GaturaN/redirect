@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        function redirectToForms() {
+            // Get the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const formA_url = urlParams.get('formA_url');
+            const formB_url = urlParams.get('formB_url');
+
+            // Open the forms in new tabs with prefilled data
+            if (formA_url) window.open(formA_url, '_blank');
+            if (formB_url) window.open(formB_url, '_blank');
+        }
+
+        // Redirect to the forms when the page loads
+        window.onload = redirectToForms;
+    </script>
+</head>
+<body>
+    <p>Redirecting, please wait...</p>
+</body>
+</html>
