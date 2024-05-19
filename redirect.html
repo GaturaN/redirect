@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Redirecting...</title>
@@ -20,5 +20,33 @@
 </head>
 <body>
     <p>Redirecting, please wait...</p>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Redirection Page</title>
+    <script type="text/javascript">
+        function redirect() {
+            // Replace these URLs with the URLs of your target forms
+            var formUrl1 = "https://forms.zoho.com/maldilivestest739/form/TestForm";
+            var formUrl2 = "https://forms.zoho.com/maldilivestest739/form/Test2Form";
+
+            // Open the forms in new tabs
+            window.open(formUrl1, "_blank");
+            window.open(formUrl2, "_blank");
+
+            // Optionally, redirect the current page to one of the forms
+            window.location.href = formUrl1;
+        }
+
+        // Execute the redirect function after the page loads
+        window.onload = redirect;
+    </script>
+</head>
+<body>
+    <p>Redirecting you to the next forms...</p>
 </body>
 </html>
