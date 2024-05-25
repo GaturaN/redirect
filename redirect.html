@@ -8,14 +8,16 @@
             var formUrl1 = "https://forms.zoho.com/maldilivestest739/form/TestForm";
             var formUrl2 = "https://forms.zoho.com/maldilivestest739/form/Test2Form";
 
-            // Open the forms in new tabs
-            var win1 = window.open(formUrl1, "_blank");
+            // Open the second form in a new tab first
             var win2 = window.open(formUrl2, "_blank");
 
             // Check if pop-ups were blocked
-            if (!win1 || !win1.closed || !win2 || !win2.closed) {
+            if (!win2) {
                 alert('Please allow pop-ups for this website to proceed.');
             }
+
+            // Redirect to the first form in the same tab
+            window.location.href = formUrl1;
         }
 
         // Execute the redirect function after the page loads
