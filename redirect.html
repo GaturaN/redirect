@@ -1,37 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirection Page</title>
-</head>
-<body>
-    <p>Thank you for submitting the form. You will be redirected to additional forms.</p>
-    <script>
-        // Prefilled URLs for Form B and Form C
-        var formUrl1 = "https://forms.zoho.com/maldilivestest739/form/TestForm";
-        var formUrl2 = "https://forms.zoho.com/maldilivestest739/form/Test2Form";
-
-        // Function to open URLs in new tabs
-        function openInNewTab(url) {
-            var win = window.open(url, '_blank');
-            if (win) {
-                // Browser has allowed it to be opened
-                win.focus();
-            } else {
-                // Browser has blocked it
-                alert('Please allow popups for this website');
-            }
-        }
-
-        // Open the forms in new tabs
-        openInNewTab(formBUrl);
-        openInNewTab(formCUrl);
-    </script>
-</body>
-</html>
-
-<!--  <!DOCTYPE html>
 <html>
 <head>
     <title>Redirection Page</title>
@@ -44,9 +11,6 @@
             // Open the forms in new tabs
             window.open(formUrl1, "_blank");
             window.open(formUrl2, "_blank");
-
-            // Optionally, redirect the current page to one of the forms
-            window.location.href = formUrl1;
         }
 
         // Execute the redirect function after the page loads
@@ -57,4 +21,3 @@
     <p>Redirecting you to the next forms...</p>
 </body>
 </html>
- -->
