@@ -1,30 +1,37 @@
-<!-- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Redirecting...</title>
-    <script type="text/javascript">
-        function redirectToForms() {
-            // Get the URL parameters
-            const urlParams = new URLSearchParams(window.location.search);
-            const formA_url = urlParams.get('formA_url');
-            const formB_url = urlParams.get('formB_url');
-
-            // Open the forms in new tabs with prefilled data
-            if (formA_url) window.open(formA_url, '_blank');
-            if (formB_url) window.open(formB_url, '_blank');
-        }
-
-        // Redirect to the forms when the page loads
-        window.onload = redirectToForms;
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection Page</title>
 </head>
 <body>
-    <p>Redirecting, please wait...</p>
+    <p>Thank you for submitting the form. You will be redirected to additional forms.</p>
+    <script>
+        // Prefilled URLs for Form B and Form C
+        var formUrl1 = "https://forms.zoho.com/maldilivestest739/form/TestForm";
+        var formUrl2 = "https://forms.zoho.com/maldilivestest739/form/Test2Form";
+
+        // Function to open URLs in new tabs
+        function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+            if (win) {
+                // Browser has allowed it to be opened
+                win.focus();
+            } else {
+                // Browser has blocked it
+                alert('Please allow popups for this website');
+            }
+        }
+
+        // Open the forms in new tabs
+        openInNewTab(formBUrl);
+        openInNewTab(formCUrl);
+    </script>
 </body>
 </html>
- -->
 
- <!DOCTYPE html>
+<!--  <!DOCTYPE html>
 <html>
 <head>
     <title>Redirection Page</title>
@@ -50,3 +57,4 @@
     <p>Redirecting you to the next forms...</p>
 </body>
 </html>
+ -->
