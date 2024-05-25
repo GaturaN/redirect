@@ -9,8 +9,13 @@
             var formUrl2 = "https://forms.zoho.com/maldilivestest739/form/Test2Form";
 
             // Open the forms in new tabs
-            window.open(formUrl1, "_blank");
-            window.open(formUrl2, "_blank");
+            var win1 = window.open(formUrl1, "_blank");
+            var win2 = window.open(formUrl2, "_blank");
+
+            // Check if pop-ups were blocked
+            if (!win1 || !win1.closed || !win2 || !win2.closed) {
+                alert('Please allow pop-ups for this website to proceed.');
+            }
         }
 
         // Execute the redirect function after the page loads
